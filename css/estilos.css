@@ -1,0 +1,631 @@
+* {
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr auto 0.3fr;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+/*---------------------------HEADER/NAV-------------------------------*/
+header {
+    background-image: url("../imagenes/banner.jpg");
+    background-size: cover;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+
+header img {
+    width: 55%;
+    height: 15vh;
+}
+
+header nav ul li {
+    display: inline;
+    background-color: #055aca;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 25px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+header nav ul li:hover {
+    background-color: #0000ff;
+    border: 2px solid purple;
+    text-shadow: 2px 2px 2px black;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    grid-area: nav;
+}
+
+nav {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    padding: 0;
+}
+
+/*-------------------------------MAIN-----------------------------------*/
+main {
+    background: rgb(65, 182, 191);
+    background: linear-gradient(128deg, rgba(65, 182, 191, 0.9023984593837535) 44%, rgba(42, 36, 226, 0.9023984593837535) 100%);
+    font-family: verdana;
+    font-weight: bold;
+    grid-area: main;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.418)), url("../imagenes/hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+}
+
+.hero h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    padding: 3%;
+    color: rgb(54, 25, 180);
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+    color: antiquewhite;
+    text-shadow: 5px 5px 5px black;
+}
+
+.hero a {
+    background-color: #055aca;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 25px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+    list-style-type: none;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: transform 557ms ease;
+}
+
+.hero a:hover {
+    transform: translate(0px, 0px) scale(1.1, 1.1);
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 200px;
+    padding: 1% 5%;
+}
+
+.section h2 {
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+.section p {
+    padding: 2%;
+    text-align: center;
+    text-shadow: 1px 1px 1px gray;
+}
+
+.r0w {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #055aca4d;
+}
+
+.rowReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.section div img {
+    width: 600px;
+    height: 300px;
+    transition: transform 1s ease;
+    padding: 0.8%;
+}
+
+.r0w img:hover {
+    transform: scale(1.1);
+}
+
+.rowReverse img:hover {
+    transform: scale(1.1);
+}
+
+/*----------------------------------FOOTER----------------------------------*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #055aca;
+    padding: 3%;
+    grid-area: footer;
+}
+
+footer a img {
+    width: 50px;
+    height: 50px;
+    transition: transform 1s ease;
+}
+
+footer a img:hover {
+    transform: rotate(360deg) translate(0px, 0px);
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer ul li {
+    color: gainsboro;
+    list-style-type: none;
+}
+
+/*----------------------------NOSOTROS---------------------------------------*/
+.nosotros {
+    text-align: left;
+    background: linear-gradient(rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.418)), url("../imagenes/nosotros.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5%;
+    color: white;
+}
+
+.nosotros h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+    padding: 5%;
+}
+
+.nosotros h2 {
+    text-align: left;
+    font-size: 30px;
+    text-shadow: 5px 5px 5px black
+}
+
+.nosotros section p {
+    font-size: 20px;
+    text-shadow: 5px 5px 5px black;
+    line-height: 40px;
+    padding-bottom: 8%;
+}
+
+.card-header {
+    background-color: rgb(54, 25, 180)
+}
+
+.card-body {
+    background: linear-gradient(128deg, rgba(65, 182, 191, 0.9023984593837535) 44%, rgba(42, 36, 226, 0.9023984593837535) 100%);
+    padding: 5%;
+}
+
+/*-----------------------------------SEDES-----------------------------------*/
+
+.sedes {
+    padding: 5%;
+    background: linear-gradient(rgba(32, 81, 187, 0.486), rgba(243, 239, 239, 0.507)), url("../imagenes/logopeq.png");
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    font-size: 20px;
+}
+
+.tituloSedes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sedes iframe {
+    padding: 0% 10%;
+    width: 100%;
+}
+
+.sedes p {
+    padding: 3%;
+}
+
+.mapas {
+    display: flex;
+    flex-direction: row;
+}
+
+/*-------------------------------OBRAS SOCIALES----------------------------*/
+.obrasSociales {
+    text-align: center;
+    padding: 5%;
+    background-image: url("../imagenes/ooss.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.829);
+}
+
+.obrasSociales ul {
+    padding: 0;
+}
+
+.obrasSociales ul li {
+    display: flex;
+    flex-direction: column;
+    background-color: #055aca;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 2%;
+    border: 2px solid blue;
+    border-radius: 1100px;
+    box-shadow: 8px 8px 8px rgb(43, 36, 36);
+    margin-top: 3%;
+    transition: transform 1s ease;
+}
+
+.obrasSociales ul li:hover {
+    background-color: blue;
+    border: 2px solid purple;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    transform: scale(1.1);
+}
+
+/*-------------------------------CONTACTO-----------------------------------*/
+.contacto {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(32, 81, 187, 0.486), rgba(243, 239, 239, 0.507)), url("../imagenes/contacto.png");
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 5%;
+    text-align: justify;
+    text-shadow: 1px 1px 1px white;
+    color: rgb(30, 41, 138);
+
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    padding: 0%;
+    width: 50%;
+}
+
+.contacto div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*------------------------------------RRHH----------------------------------*/
+.rrhh {
+    padding: 20% 5%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
+    background: linear-gradient(rgba(0, 0, 0, 0.486), rgba(0, 0, 0, 0.473)), url("../imagenes/rrhh.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 3px 3px 3px gray;
+}
+
+.rrhh a {
+    font-size: 30px;
+}
+
+.rrhh h1 {
+    font-size: 60px;
+    color: rgb(54, 25, 180);
+    padding-bottom: 5%;
+}
+
+/*-------------------------------MEDIA QUERIES----------------------------------*/
+@media screen and (max-width:821px) {
+
+    header img {
+        width: 90%;
+        height: 10vh;
+    }
+
+    header nav ul {
+        width: 100%;
+    }
+
+    header nav ul li {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 0;
+        border-radius: 0%;
+    }
+
+    footer a img {
+        width: 30px;
+        height: 30px;
+        padding: 5%;
+    }
+
+    footer ul li {
+        padding: 0% 10%;
+        font-size: 13px;
+    }
+
+    .hero {
+        background-attachment: local;
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .carousel-inner img {
+        width: 90%;
+        height: 10vh;
+    }
+
+    .section div img {
+        width: 70%;
+        height: 50%;
+    }
+
+    .r0w {
+        flex-direction: column;
+    }
+
+    .rowReverse {
+        flex-direction: column;
+    }
+
+    .nosotros h1 {
+        font-size: 35px;
+    }
+
+    .nosotros h2 {
+        font-size: 30px;
+    }
+
+    .nosotros section p {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .sedes {
+        flex-direction: column;
+    }
+
+    .sedes h1 {
+        font-size: 30px;
+    }
+
+    .sedes h2 {
+        font-size: 20px;
+    }
+
+    .sedes p {
+        padding-top: 10%;
+        font-size: 15px;
+    }
+
+    .sedes iframe {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .mapas {
+        flex-direction: column;
+    }
+
+    .obrasSociales h1 {
+        font-size: 25px;
+    }
+
+    .contacto form {
+        width: 100%;
+    }
+
+    .rrhh h1 {
+        font-size: 40px;
+    }
+
+    .rrhh p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .rrhh a {
+        font-size: 30px;
+    }
+}
+
+/*---------------------------------------------------------------------------*/
+@media screen and (max-width:375px) {
+
+    .gridContainer {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    nav ul {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: center;
+    }
+
+    header img {
+        width: 100%;
+        height: auto;
+    }
+
+    header nav ul li {
+        width: 60%;
+        font-size: 10px;
+    }
+
+    footer ul li {
+        font-size: 8px;
+    }
+
+    footer a img {
+        width: 20px;
+        height: 20px;
+        padding: 5%;
+    }
+
+    .section div img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .hero a {
+        font-size: 10px;
+        padding: 0%;
+        margin: 0;
+    }
+
+    .carousel-inner img {
+        height: 35px;
+    }
+
+    .section h2 {
+        font-size: 15px;
+        padding-top: 0%;
+    }
+
+    .section p {
+        font-size: 10px;
+    }
+
+    .nosotros {
+        padding: 0;
+    }
+
+    .nosotros h1 {
+        font-size: 10px;
+    }
+
+    .nosotros h2 {
+        font-size: 10px;
+    }
+
+    .nosotros section p {
+        font-size: 10px;
+        line-height: 8px;
+    }
+
+    .sedes h1 {
+        font-size: 20px;
+    }
+
+    .sedes h2 {
+        font-size: 15px;
+    }
+
+    .sedes p {
+        font-size: 10px;
+    }
+
+    .obrasSociales h1 {
+        font-size: 15px;
+    }
+
+    .obrasSociales ul li {
+        padding: 2%;
+        margin: 5% 0%;
+        font-size: 10px;
+    }
+
+    .contacto img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contacto h1 {
+        font-size: 25px;
+    }
+
+    .rrhh h1 {
+        font-size: 13px;
+    }
+
+    .rrhh p {
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .rrhh a {
+        font-size: 10px;
+    }
+
+}
+
+/*---------------------------------------------------------------------------*/

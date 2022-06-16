@@ -1,0 +1,26 @@
+/*-------------------------------------GLOBAL---------------------------------------*/
+
+* {
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr auto 0.3fr;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+main {
+    background: rgb(65, 182, 191);
+    background: linear-gradient(128deg, rgba(65, 182, 191, 0.9023984593837535) 44%, rgba(42, 36, 226, 0.9023984593837535) 100%);
+    font-family: verdana;
+    font-weight: bold;
+    grid-area: main;
+}

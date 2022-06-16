@@ -1,0 +1,30 @@
+@import "../base/variables";
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: $colorPrincipal;
+    padding: 3%;
+    grid-area: footer;
+
+    ul {
+        padding: 0;
+
+        li {
+            color: $colorTextos;
+            list-style-type: none;
+        }
+    }
+
+    a {
+        img {
+            width: 50px;
+            height: 50px;
+            transition: transform 1s ease;
+
+            &:hover {
+                transform: rotate(360deg) translate(0px, 0px);
+            }
+        }
+    }
+}
