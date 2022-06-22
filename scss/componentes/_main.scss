@@ -2,8 +2,15 @@
 
 /*----------------------------------MAIN INDEX--------------------------------------*/
 
+$estilos: (
+    centrar:center,
+    negrita:bold,
+    display:flex,
+    ancho:100%
+);
+
 .hero {
-    display: flex;
+    display: map-get($estilos, display);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -11,7 +18,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100%;
+    width: map-get($estilos, ancho);
     height: auto;
     padding: 5%;
 
@@ -21,18 +28,20 @@
         padding: 3%;
         color: $colorTitulos;
         text-shadow: 2px 2px 2px $sombraTextos;
-        font-weight: bold;
+        text-align: map-get($estilos, centrar);
+        font-weight: map-get($estilos, negrita);
     }
 
     p {
         font-size: 20px;
         color: $colorTextos;
         text-shadow: 5px 5px 5px $sombraTextos;
+        text-align: map-get($estilos, centrar);
     }
 
     a {
         background-color: $colorPrincipal;
-        font-weight: bold;
+        font-weight: map-get($estilos, negrita);
         font-size: 15px;
         padding: 15px 25px;
         border: 2px solid $colorSecundario;
@@ -52,22 +61,26 @@
     }
 }
 
-.carousel-inner img {
-    width: 100%;
-    height: 200px;
-    padding: 1% 5%;
+section {
+    .carousel-inner {
+        img {
+            width: map-get($estilos, ancho);
+            height: 200px;
+            padding: 1% 5%;
+        }
+    }
 }
 
 .section {
     h2 {
-        text-align: center;
+        text-align: map-get($estilos, centrar);
         color: $colorTextos;
         text-shadow: 3px 3px 3px $sombraTextos;
     }
 
     p {
         padding: 2%;
-        text-align: center;
+        text-align: map-get($estilos, centrar);
         text-shadow: 1px 1px 1px gray;
     }
 
@@ -82,9 +95,9 @@
 }
 
 .r0w {
-    display: flex;
+    display: map-get($estilos, display);
     flex-direction: row;
-    align-items: center;
+    align-items: map-get($estilos, centrar);
     background-color: #055aca4d;
 
     img {
@@ -95,9 +108,9 @@
 }
 
 .rowReverse {
-    display: flex;
+    display: map-get($estilos, display);
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: map-get($estilos, centrar);
 
     img {
         &:hover {
@@ -125,7 +138,7 @@
         padding: 5%;
     }
 
-    h2 {
+    h2__titulo {
         text-align: left;
         font-size: 30px;
         text-shadow: 5px 5px 5px $sombraTextos;
@@ -133,9 +146,8 @@
 
     section {
         p {
-            font-size: 20px;
-            text-shadow: 5px 5px 5px $sombraTextos;
-            line-height: 40px;
+            @extend h2__titulo;
+            line-height: 30px;
             padding-bottom: 8%;
         }
     }
@@ -221,9 +233,14 @@
 
 /*----------------------------------MAIN CONTACTO-----------------------------------*/
 
+@mixin display ($display, $flex-direction) {
+
+    display: $display;
+    flex-direction: $flex-direction;
+}
+
 .contacto {
-    display: flex;
-    flex-direction: column;
+    @include display (flex, column);
     background: linear-gradient(rgba(32, 81, 187, 0.486), rgba(243, 239, 239, 0.507)), url("../imagenes/contacto.png");
     background-color: $colorTextos;
     background-size: cover;
@@ -235,16 +252,14 @@
     color: $colorTitulos;
 
     form {
-        display: flex;
-        flex-direction: column;
+        @include display (flex, column);
         line-height: 35px;
         padding: 0%;
         width: 50%;
     }
 
     div {
-        display: flex;
-        flex-direction: column;
+        @include display (flex, column);
         align-items: center;
     }
 

@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.5fr auto 0.3fr;
-  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  grid-template-areas: "header header header""main main main""footer footer footer";
 }
 
 main {
@@ -32,19 +32,23 @@ header {
   align-items: center;
   grid-area: header;
 }
+
 header img {
   width: 55%;
   height: 15vh;
 }
+
 header nav {
   margin-top: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 header nav ul {
   padding: 0;
 }
+
 header nav ul li {
   display: inline;
   background-color: #055aca;
@@ -55,11 +59,13 @@ header nav ul li {
   border-radius: 10px;
   box-shadow: 5px 5px 5px gray;
 }
+
 header nav ul li:hover {
   background-color: blue;
   border: 2px solid purple;
   text-shadow: 2px 2px 2px black;
 }
+
 header nav ul li a {
   color: white;
   text-decoration: none;
@@ -82,19 +88,24 @@ header nav ul li a {
   height: auto;
   padding: 5%;
 }
+
 .hero h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 50px;
   padding: 3%;
   color: rgb(54, 25, 180);
   text-shadow: 2px 2px 2px black;
+  text-align: center;
   font-weight: bold;
 }
+
 .hero p {
   font-size: 20px;
   color: white;
   text-shadow: 5px 5px 5px black;
+  text-align: center;
 }
+
 .hero a {
   background-color: #055aca;
   font-weight: bold;
@@ -111,11 +122,12 @@ header nav ul li a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   transition: transform 557ms ease;
 }
+
 .hero a:hover {
   transform: translate(0px, 0px) scale(1.1, 1.1);
 }
 
-.carousel-inner img {
+section .carousel-inner img {
   width: 100%;
   height: 200px;
   padding: 1% 5%;
@@ -126,11 +138,13 @@ header nav ul li a {
   color: white;
   text-shadow: 3px 3px 3px black;
 }
+
 .section p {
   padding: 2%;
   text-align: center;
   text-shadow: 1px 1px 1px gray;
 }
+
 .section div img {
   width: 600px;
   height: 300px;
@@ -144,6 +158,7 @@ header nav ul li a {
   align-items: center;
   background-color: rgba(5, 90, 202, 0.3019607843);
 }
+
 .r0w img:hover {
   transform: scale(1.1);
 }
@@ -153,6 +168,7 @@ header nav ul li a {
   flex-direction: row-reverse;
   align-items: center;
 }
+
 .rowReverse img:hover {
   transform: scale(1.1);
 }
@@ -167,6 +183,7 @@ header nav ul li a {
   padding: 5%;
   color: white;
 }
+
 .nosotros h1 {
   text-align: center;
   font-size: 60px;
@@ -174,15 +191,16 @@ header nav ul li a {
   text-shadow: 5px 5px 5px black;
   padding: 5%;
 }
-.nosotros h2 {
+
+.nosotros h2__titulo,
+.nosotros section p {
   text-align: left;
   font-size: 30px;
   text-shadow: 5px 5px 5px black;
 }
+
 .nosotros section p {
-  font-size: 20px;
-  text-shadow: 5px 5px 5px black;
-  line-height: 40px;
+  line-height: 30px;
   padding-bottom: 8%;
 }
 
@@ -211,10 +229,12 @@ header nav ul li a {
   text-shadow: 3px 3px 3px black;
   font-size: 20px;
 }
+
 .sedes iframe {
   padding: 0% 10%;
   width: 100%;
 }
+
 .sedes p {
   padding: 3%;
 }
@@ -234,9 +254,11 @@ header nav ul li a {
   background-attachment: fixed;
   text-shadow: 1px 1px 1px white;
 }
+
 .obrasSociales ul {
   padding: 0;
 }
+
 .obrasSociales ul li {
   display: flex;
   flex-direction: column;
@@ -250,6 +272,7 @@ header nav ul li a {
   margin-top: 3%;
   transition: transform 1s ease;
 }
+
 .obrasSociales ul li:hover {
   background-color: blue;
   border: 2px solid purple;
@@ -272,6 +295,7 @@ header nav ul li a {
   text-shadow: 1px 1px 1px white;
   color: rgb(54, 25, 180);
 }
+
 .contacto form {
   display: flex;
   flex-direction: column;
@@ -279,6 +303,7 @@ header nav ul li a {
   padding: 0%;
   width: 50%;
 }
+
 .contacto div {
   display: flex;
   flex-direction: column;
@@ -297,16 +322,19 @@ header nav ul li a {
   color: white;
   text-shadow: 2px 2px 2px black;
 }
+
 .rrhh h1 {
   font-size: 60px;
   color: rgb(54, 25, 180);
   padding-bottom: 5%;
   text-shadow: 2px 2px 2px white;
 }
+
 .rrhh a {
   font-size: 30px;
 }
 
+/*------------------------------------FOOTER-------------------------------------*/
 footer {
   display: flex;
   justify-content: space-between;
@@ -314,18 +342,22 @@ footer {
   padding: 3%;
   grid-area: footer;
 }
+
 footer ul {
   padding: 0;
 }
+
 footer ul li {
   color: white;
   list-style-type: none;
 }
+
 footer a img {
   width: 50px;
   height: 50px;
   transition: transform 1s ease;
 }
+
 footer a img:hover {
   transform: rotate(360deg) translate(0px, 0px);
 }
@@ -336,9 +368,11 @@ footer a img:hover {
     width: 90%;
     height: 10vh;
   }
+
   header nav ul {
     width: 100%;
   }
+
   header nav ul li {
     display: flex;
     flex-flow: column nowrap;
@@ -348,185 +382,235 @@ footer a img:hover {
     height: 0;
     border-radius: 0%;
   }
+
   footer a img {
     width: 30px;
     height: 30px;
     padding: 5%;
   }
+
   footer ul li {
     padding: 0% 10%;
     font-size: 13px;
   }
+
   .hero {
     background-attachment: local;
     height: auto;
   }
+
   .hero h1 {
     font-size: 30px;
   }
+
   .hero p {
     font-size: 15px;
   }
-  .carousel-inner img {
+
+  section .carousel-inner img {
     width: 90%;
     height: 10vh;
   }
+
   .section div img {
     width: 70%;
     height: 50%;
   }
+
   .r0w {
     flex-direction: column;
   }
+
   .rowReverse {
     flex-direction: column;
   }
+
   .nosotros h1 {
     font-size: 35px;
   }
+
   .nosotros h2 {
     font-size: 30px;
   }
+
   .nosotros section p {
     font-size: 18px;
     line-height: 18px;
   }
+
   .sedes {
     flex-direction: column;
   }
+
   .sedes h1 {
     font-size: 30px;
   }
+
   .sedes h2 {
     font-size: 20px;
   }
+
   .sedes p {
     padding-top: 10%;
     font-size: 15px;
   }
+
   .sedes iframe {
     width: 100%;
     height: 40vh;
   }
+
   .mapas {
     flex-direction: column;
   }
+
   .obrasSociales h1 {
     font-size: 25px;
   }
+
   .contacto form {
     width: 100%;
   }
+
   .rrhh h1 {
     font-size: 40px;
   }
+
   .rrhh p {
     font-size: 20px;
     line-height: 25px;
   }
+
   .rrhh a {
     font-size: 30px;
   }
 }
+
 /*---------------------------------------------------------------------------*/
 @media screen and (max-width: 375px) {
   .gridContainer {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "header" "main" "footer";
+    grid-template-areas: "header""main""footer";
   }
+
   nav ul {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-items: center;
   }
+
   header img {
     width: 100%;
     height: auto;
   }
+
   header nav ul li {
     width: 60%;
     font-size: 10px;
   }
+
   footer ul li {
     font-size: 8px;
   }
+
   footer a img {
     width: 20px;
     height: 20px;
     padding: 5%;
   }
+
   .section div img {
     width: 100%;
     height: 50%;
   }
+
   .hero {
     height: auto;
   }
+
   .hero h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
+
   .hero p {
     font-size: 13px;
   }
+
   .hero a {
     font-size: 10px;
     padding: 0%;
     margin: 0;
   }
-  .carousel-inner img {
+
+  section .carousel-inner img {
     height: 35px;
   }
+
   .section h2 {
     font-size: 15px;
     padding-top: 0%;
   }
+
   .section p {
     font-size: 10px;
   }
+
   .nosotros {
     padding: 0;
   }
+
   .nosotros h1 {
     font-size: 10px;
   }
+
   .nosotros h2 {
     font-size: 10px;
   }
+
   .nosotros section p {
     font-size: 10px;
     line-height: 8px;
   }
+
   .sedes h1 {
     font-size: 20px;
   }
+
   .sedes p {
     font-size: 10px;
   }
+
   .obrasSociales h1 {
     font-size: 15px;
   }
+
   .obrasSociales ul li {
     padding: 2%;
     margin: 5% 0%;
     font-size: 10px;
   }
+
   .contacto img {
     width: 100%;
     height: auto;
   }
+
   .contacto h1 {
     font-size: 25px;
   }
+
   .rrhh h1 {
     font-size: 13px;
   }
+
   .rrhh p {
     font-size: 10px;
     line-height: 10px;
   }
+
   .rrhh a {
     font-size: 10px;
   }

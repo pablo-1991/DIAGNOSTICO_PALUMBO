@@ -39,7 +39,7 @@ header {
                 &:hover {
                     background-color: $colorSecundario;
                     border: 2px solid $colorBordes;
-                    text-shadow: 2px 2px 2px black;
+                    text-shadow: 2px 2px 2px $sombraTextos;
                 }
 
                 a {
