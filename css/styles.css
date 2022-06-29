@@ -58,10 +58,11 @@ header nav ul li {
   border: 2px solid blue;
   border-radius: 10px;
   box-shadow: 5px 5px 5px gray;
+  transition: 0.8s;
 }
 
 header nav ul li:hover {
-  background-color: blue;
+  background-color: #3b8af3;
   border: 2px solid purple;
   text-shadow: 2px 2px 2px black;
 }
@@ -72,6 +73,10 @@ header nav ul li a {
   text-shadow: 2px 2px 2px black;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   grid-area: nav;
+}
+
+header nav ul li a:hover {
+  color: white;
 }
 
 /*----------------------------------MAIN INDEX--------------------------------------*/
@@ -120,11 +125,11 @@ header nav ul li a {
   text-decoration: none;
   text-shadow: 2px 2px 2px black;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  transition: transform 557ms ease;
+  transition: 0.8s;
 }
 
 .hero a:hover {
-  transform: translate(0px, 0px) scale(1.1, 1.1);
+  background-color: #3b8af3;
 }
 
 section .carousel-inner img {
@@ -133,19 +138,24 @@ section .carousel-inner img {
   padding: 1% 5%;
 }
 
-.section h2 {
+.servicios h2 {
   text-align: center;
   color: white;
   text-shadow: 3px 3px 3px black;
+  transition: transform 1s ease;
 }
 
-.section p {
+.servicios h2:hover {
+  transform: scale(1.1);
+}
+
+.servicios p {
   padding: 2%;
   text-align: center;
   text-shadow: 1px 1px 1px gray;
 }
 
-.section div img {
+.servicios div img {
   width: 600px;
   height: 300px;
   transition: transform 1s ease;
@@ -235,8 +245,10 @@ section .carousel-inner img {
   width: 100%;
 }
 
-.sedes p {
-  padding: 3%;
+.sedes h3 {
+  padding: 5%;
+  font-size: 20px;
+  text-align: center;
 }
 
 .mapas {
@@ -253,6 +265,10 @@ section .carousel-inner img {
   background-size: cover;
   background-attachment: fixed;
   text-shadow: 1px 1px 1px white;
+}
+
+.obrasSociales h1 {
+  font-size: 50px;
 }
 
 .obrasSociales ul {
@@ -290,7 +306,7 @@ section .carousel-inner img {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 5%;
+  padding: 1%;
   text-align: justify;
   text-shadow: 1px 1px 1px white;
   color: rgb(54, 25, 180);
@@ -299,15 +315,24 @@ section .carousel-inner img {
 .contacto form {
   display: flex;
   flex-direction: column;
-  line-height: 35px;
-  padding: 0%;
-  width: 50%;
+  background-color: rgba(72, 72, 72, 0.9);
+  padding: 10%;
+  width: 80%;
+  border-radius: 30px;
+  line-height: 45px;
+  color: #3b8af3;
+  text-align: center;
 }
 
 .contacto div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 5%;
+}
+
+.contacto p {
+  margin: 0;
 }
 
 /*--------------------------------------MAIN RRHH-----------------------------------*/
@@ -412,7 +437,7 @@ footer a img:hover {
     height: 10vh;
   }
 
-  .section div img {
+  .servicios div img {
     width: 70%;
     height: 50%;
   }
@@ -450,7 +475,7 @@ footer a img:hover {
     font-size: 20px;
   }
 
-  .sedes p {
+  .sedes h3 {
     padding-top: 10%;
     font-size: 15px;
   }
@@ -466,6 +491,10 @@ footer a img:hover {
 
   .obrasSociales h1 {
     font-size: 25px;
+  }
+
+  .contacto h2 {
+    font-size: 20px;
   }
 
   .contacto form {
@@ -549,12 +578,12 @@ footer a img:hover {
     height: 35px;
   }
 
-  .section h2 {
+  .servicios h2 {
     font-size: 15px;
     padding-top: 0%;
   }
 
-  .section p {
+  .servicios p {
     font-size: 10px;
   }
 
@@ -579,8 +608,8 @@ footer a img:hover {
     font-size: 20px;
   }
 
-  .sedes p {
-    font-size: 10px;
+  .sedes h3 {
+    font-size: 12px;
   }
 
   .obrasSociales h1 {
@@ -600,6 +629,14 @@ footer a img:hover {
 
   .contacto h1 {
     font-size: 25px;
+  }
+
+  .contacto h2 {
+    font-size: 15px;
+  }
+
+  .contacto form {
+    height: 80%;
   }
 
   .rrhh h1 {

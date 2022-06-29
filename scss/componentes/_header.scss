@@ -35,9 +35,10 @@ header {
                 border: 2px solid $colorSecundario;
                 border-radius: 10px;
                 box-shadow: 5px 5px 5px gray;
+                transition: 0.8s;
 
                 &:hover {
-                    background-color: $colorSecundario;
+                    background-color: #3b8af3;
                     border: 2px solid $colorBordes;
                     text-shadow: 2px 2px 2px $sombraTextos;
                 }
@@ -48,6 +49,10 @@ header {
                     text-shadow: 2px 2px 2px $sombraTextos;
                     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                     grid-area: nav;
+
+                    &:hover {
+                        color: $colorTextos;
+                    }
                 }
             }
         }

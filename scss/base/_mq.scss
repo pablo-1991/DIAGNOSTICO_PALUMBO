@@ -63,7 +63,7 @@
         }
     }
 
-    .section {
+    .servicios {
         div {
             img {
                 width: 70%;
@@ -108,7 +108,7 @@
             font-size: 20px;
         }
 
-        p {
+        h3 {
             padding-top: 10%;
             font-size: 15px;
         }
@@ -130,6 +130,10 @@
     }
 
     .contacto {
+        h2 {
+            font-size: 20px;
+        }
+
         form {
             width: 100%;
         }
@@ -243,7 +247,7 @@
         }
     }
 
-    .section {
+    .servicios {
         h2 {
             font-size: 15px;
             padding-top: 0%;
@@ -254,7 +258,7 @@
         }
     }
 
-    
+
 
     .nosotros {
         padding: 0;
@@ -281,8 +285,8 @@
 
         }
 
-        p {
-            font-size: 10px;
+        h3 {
+            font-size: 12px;
         }
     }
 
@@ -309,6 +313,12 @@
         h1 {
             font-size: 25px;
         }
+
+        h2 {
+            font-size: 15px;
+        }
+
+        form { height: 80%;}
     }
 
     .rrhh {

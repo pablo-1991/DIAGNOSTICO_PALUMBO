@@ -53,10 +53,10 @@ $estilos: (
         text-decoration: none;
         text-shadow: 2px 2px 2px $sombraTextos;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        transition: transform 557ms ease;
+        transition: 0.8s;
 
         &:hover {
-            transform: translate(0px, 0px) scale(1.1, 1.1);
+            background-color: #3b8af3;
         }
     }
 }
@@ -71,11 +71,16 @@ section {
     }
 }
 
-.section {
+.servicios {
     h2 {
         text-align: map-get($estilos, centrar);
         color: $colorTextos;
         text-shadow: 3px 3px 3px $sombraTextos;
+        transition: transform 1s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     p {
@@ -184,8 +189,10 @@ section {
         width: 100%;
     }
 
-    p {
-        padding: 3%;
+    h3 {
+        padding: 5%;
+        font-size: 20px;
+        text-align: center;
     }
 }
 
@@ -203,6 +210,10 @@ section {
     background-size: cover;
     background-attachment: fixed;
     text-shadow: 1px 1px 1px $colorTextos;
+
+    h1 {
+        font-size: 50px;
+    }
 
     ul {
         padding: 0;
@@ -246,21 +257,30 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 5%;
+    padding: 1%;
     text-align: justify;
     text-shadow: 1px 1px 1px $colorTextos;
     color: $colorTitulos;
 
     form {
         @include display (flex, column);
-        line-height: 35px;
-        padding: 0%;
-        width: 50%;
+        background-color: rgba(72, 72, 72, 0.9);
+        padding: 10%;
+        width: 80%;
+        border-radius: 30px;
+        line-height: 45px;
+        color: #3b8af3;
+        text-align: center
     }
 
     div {
         @include display (flex, column);
         align-items: center;
+        padding-top: 5%;
+    }
+
+    p {
+        margin: 0;
     }
 
 }
